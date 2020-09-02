@@ -1,15 +1,42 @@
 {
-  "require": {
-    "guzzlehttp/guzzle": "^7.0",
-    "symfony/dom-crawler": "^5.1",
-    "symfony/css-selector": "^5.1"
-  },
-  "autoload": {
-    "psr-4": {
-      "Alura\\BuscadorDeCursos\\": "src/"
+    "name": "cviniciussdias/buscador-cursos",
+    "description": "Projeto que busca os cursos no site da Alura",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Vinicius Dias",
+            "email": "carlosv775@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/dom-crawler": "^4.2",
+        "symfony/css-selector": "^4.2"
     },
-    "classmap": [
-      "./Teste.php"
-    ]
-  }
+    "autoload": {
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1",
+        "squizlabs/php_codesniffer": "^3.4",
+        "phan/phan": "^1.3"
+    },
+    "scripts": {
+        "test": "phpunit tests\\TestBuscadorDeCursos.php",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
+    }
 }
