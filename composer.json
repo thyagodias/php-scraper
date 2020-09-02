@@ -1,15 +1,29 @@
 {
-  "require": {
-    "guzzlehttp/guzzle": "^7.0",
-    "symfony/dom-crawler": "^5.1",
-    "symfony/css-selector": "^5.1"
-  },
-  "autoload": {
-    "psr-4": {
-      "Alura\\BuscadorDeCursos\\": "src/"
+    "name": "cviniciussdias/buscador-cursos",
+    "description": "Projeto que busca os cursos no site da Alura",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Vinicius Dias",
+            "email": "carlosv775@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/dom-crawler": "^4.2",
+        "symfony/css-selector": "^4.2"
     },
-    "classmap": [
-      "./Teste.php"
-    ]
-  }
+    "autoload": {
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3",
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "^3.2"
+    },
+    "scripts": {
+        "post-update-cmd": "code ."
+    }
 }
