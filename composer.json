@@ -1,11 +1,11 @@
 {
-  "name": "cviniciussdias/buscador-cursos",
+  "name": "thyagodias/buscador-cursos",
   "description": "Projeto que busca os cursos no site da Alura",
   "type": "library",
   "authors": [
     {
-      "name": "Vinicius Dias",
-      "email": "carlosv775@gmail.com"
+      "name": "Thyago Dias",
+      "email": "thyagojuniorrochadias@gmail.com"
     }
   ],
   "require": {
